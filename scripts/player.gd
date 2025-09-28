@@ -22,6 +22,12 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	
+	if velocity.x < 0:
+		$sPlayer.flip_h = true
+	else:
+		$sPlayer.flip_h = false
+	
+	# Стрельба из оружия
 	if Input.is_action_just_pressed("shoot"):
 		var bullet = bullet_scene.instantiate()
 		bullet.global_transform = $Gun/Muzzle.global_transform
