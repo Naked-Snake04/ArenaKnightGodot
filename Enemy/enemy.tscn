@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2pb1h"]
 size = Vector2(28, 50)
 
-[node name="Enemy" type="RigidBody2D"]
+[node name="Enemy" type="CharacterBody2D"]
 script = ExtResource("1_px1sc")
 
 [node name="sEnemy" type="Sprite2D" parent="."]
@@ -16,3 +16,9 @@ texture = ExtResource("1_2pb1h")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 2)
 shape = SubResource("RectangleShape2D_2pb1h")
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+target_position = Vector2(23, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+target_position = Vector2(-20, 0)

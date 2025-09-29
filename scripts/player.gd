@@ -24,7 +24,7 @@ func _physics_process(delta: float) -> void:
 	
 	if direction < 0:
 		$sPlayer.flip_h = true
-	elif direction > 0:
+	elif direction:
 		$sPlayer.flip_h = false
 	
 	# Стрельба из оружия
