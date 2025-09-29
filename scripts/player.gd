@@ -22,9 +22,9 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	
-	if velocity.x < 0:
+	if direction < 0:
 		$sPlayer.flip_h = true
-	else:
+	elif direction > 0:
 		$sPlayer.flip_h = false
 	
 	# Стрельба из оружия
