@@ -34,3 +34,5 @@ func _physics_process(delta: float) -> void:
 		get_tree().get_root().add_child(bullet)
 	
 	move_and_slide()
+	
+	Signals.player_position.emit(global_position)
