@@ -1,5 +1,15 @@
 extends Node2D
 
+var bullet_scene = preload("res://enemy_bullet/enemy_bullet.tscn")
+
 ## Оружие противника смотрит на игрока
 func _ready() -> void:
-	Signals.player_position.connect(look_at)
+	Signals.player_position.connect(create_bullet)
+
+func create_bullet(player_position: Vector2):
+	look_at(player_position) # Делаем так, чтобы камера смотрела на игрока
+	var distance = (position - player_position).normalized() # Вычисляем дистанцию от игрока
+	if (distance.x < 5):
+		var bullet = bullet_scene.instantiate()
+		bullet.global_transform = $Muzzle.global_transform
+		get_tree().get_root().add_child(bullet)

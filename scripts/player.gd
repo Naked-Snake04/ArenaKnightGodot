@@ -1,7 +1,5 @@
 extends CharacterBody2D
 
-var bullet_scene = preload("res://Bullet/bullet.tscn")
-
 const SPEED = 400.0
 const JUMP_VELOCITY = -500.0
 
@@ -26,12 +24,6 @@ func _physics_process(delta: float) -> void:
 		$sPlayer.flip_h = true
 	elif direction:
 		$sPlayer.flip_h = false
-	
-	# Стрельба из оружия
-	if Input.is_action_just_pressed("shoot"):
-		var bullet = bullet_scene.instantiate()
-		bullet.global_transform = $Gun/Muzzle.global_transform
-		get_tree().get_root().add_child(bullet)
 	
 	move_and_slide()
 	
