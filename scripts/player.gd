@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 const SPEED = 400.0
 const JUMP_VELOCITY = -500.0
+@export var hp = 10
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -28,3 +29,9 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 	Signals.player_position.emit(global_position)
+
+func take_damage(damage):
+	hp -= damage
+	if hp < 1:
+		get_tree().reload_current_scene()
+		
