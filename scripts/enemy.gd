@@ -29,4 +29,5 @@ func _physics_process(delta: float) -> void:
 func take_damage(damage):
 	hp -= damage
 	if hp < 1:
+		Signals.enemy_dead.emit()
 		queue_free()
