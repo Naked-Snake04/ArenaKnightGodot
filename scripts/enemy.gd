@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+class_name Enemy
+
 const SPEED = 400
 var direction = 1
 @onready var ray_cast_right: RayCast2D = $RayCastRight
