@@ -7,6 +7,8 @@
 radius = 8.062258
 
 [node name="EnemyBullet" type="Area2D"]
+collision_layer = 16
+collision_mask = 5
 script = ExtResource("1_2ff5n")
 
 [node name="sBullet" type="Sprite2D" parent="."]
