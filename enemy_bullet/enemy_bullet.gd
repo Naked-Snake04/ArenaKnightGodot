@@ -12,5 +12,5 @@ func _on_bullet_body_entered(body: Node2D) -> void:
 	if body is Player:
 		body.take_damage(damage)
 		queue_free()
-	if body.name == "TileMap":
+	if body is TileMapLayer:
 		queue_free()
