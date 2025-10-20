@@ -58,6 +58,7 @@ shoot={
 2d_physics/layer_3="ground"
 2d_physics/layer_4="bullet"
 2d_physics/layer_5="enemy_bullet"
+2d_physics/layer_6="killzone"
 
 [rendering]
 
