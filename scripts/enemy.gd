@@ -9,6 +9,10 @@ var direction = 1
 
 var hp = 4
 
+func _ready() -> void:
+	## Добавляем в группу врагов, для подсчёта их на уровне
+	add_to_group("Enemies")
+
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta

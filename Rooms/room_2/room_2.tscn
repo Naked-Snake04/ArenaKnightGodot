@@ -369,11 +369,11 @@ position = Vector2(465, 203)
 [node name="PlayerCamera" type="Camera2D" parent="Player"]
 position = Vector2(3, 7)
 
-[node name="Enemy" parent="." groups=["Enemies"] instance=ExtResource("15_leq1s")]
+[node name="Enemy" parent="." instance=ExtResource("15_leq1s")]
 position = Vector2(861, 307)
 
-[node name="Enemy2" parent="." groups=["Enemies"] instance=ExtResource("15_leq1s")]
+[node name="Enemy2" parent="." instance=ExtResource("15_leq1s")]
 position = Vector2(239, 315)
 
-[node name="Enemy3" parent="." groups=["Enemies"] instance=ExtResource("15_leq1s")]
+[node name="Enemy3" parent="." instance=ExtResource("15_leq1s")]
 position = Vector2(408, 383)
