@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://c16r2w7lqm7e"]
+[gd_scene load_steps=32 format=4 uid="uid://c16r2w7lqm7e"]
 
 [ext_resource type="Texture2D" uid="uid://chnijdn2ylr5p" path="res://sprites/Tiles/Platformer/Cartoon_Medieval_Armory_Level_Set_Platformer - Ground 04.png" id="1_fifdw"]
 [ext_resource type="Texture2D" uid="uid://br0tkdn6gw3p3" path="res://sprites/Tiles/Platformer/Cartoon_Medieval_Armory_Level_Set_Platformer - Ground 01.png" id="2_43sut"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://dveffv7ajk6bx" path="res://sprites/Tiles/Platformer/Cartoon_Medieval_Armory_Level_Set_Platformer - Ground 09.png" id="13_duje4"]
 [ext_resource type="PackedScene" uid="uid://b27wqobrbg7v3" path="res://Player/player.tscn" id="14_a64yw"]
 [ext_resource type="PackedScene" uid="uid://bkiqre8kihl8" path="res://Killzone/killzone.tscn" id="15_43sut"]
+[ext_resource type="PackedScene" uid="uid://brqa853qoim4q" path="res://Enemy/enemy.tscn" id="16_6p0md"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y5ytl"]
 texture = ExtResource("1_fifdw")
@@ -362,10 +363,26 @@ tile_map_data = PackedByteArray("AAABAA4AAgABAAAAAAABAA8AAgABAAEAAAACAA4AAgABAAA
 tile_set = SubResource("TileSet_0r8c8")
 
 [node name="Player" parent="." instance=ExtResource("14_a64yw")]
-position = Vector2(465, 203)
+position = Vector2(258, 271)
 
 [node name="PlayerCamera" type="Camera2D" parent="Player"]
 position = Vector2(3, 7)
+scale = Vector2(3.117793, 1.1508658)
 
 [node name="Killzone" parent="." instance=ExtResource("15_43sut")]
 position = Vector2(1880, 853)
+
+[node name="Enemy2" parent="." instance=ExtResource("16_6p0md")]
+position = Vector2(2598, 70)
+
+[node name="Enemy" parent="." instance=ExtResource("16_6p0md")]
+position = Vector2(995, 320)
+
+[node name="Enemy3" parent="." instance=ExtResource("16_6p0md")]
+position = Vector2(4281, -14)
+
+[node name="Enemy4" parent="." instance=ExtResource("16_6p0md")]
+position = Vector2(5484, 330)
+
+[node name="Enemy5" parent="." instance=ExtResource("16_6p0md")]
+position = Vector2(6940, 295)
