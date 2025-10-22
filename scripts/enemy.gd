@@ -30,7 +30,7 @@ func _physics_process(delta: float) -> void:
 	
 	if direction < 0:
 		$sEnemy.flip_h = true
-	elif direction:
+	elif direction >= 0:
 		$sEnemy.flip_h = false
 	
 	move_and_slide()

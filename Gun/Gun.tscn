@@ -11,6 +11,6 @@ position = Vector2(19, -1)
 scale = Vector2(0.7734375, 0.71875)
 
 [node name="sGun" type="Sprite2D" parent="."]
-position = Vector2(0, 9.536743e-07)
+position = Vector2(11, 0)
 scale = Vector2(0.7734375, 0.71875)
 texture = ExtResource("1_psro5")

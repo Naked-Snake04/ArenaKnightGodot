@@ -19,4 +19,4 @@ position = Vector2(4, 3)
 shape = SubResource("RectangleShape2D_l8h54")
 
 [node name="Gun" parent="." instance=ExtResource("3_btcbx")]
-position = Vector2(11, 12)
+position = Vector2(1, 13)
